@@ -1,0 +1,14 @@
+<h1 class="text-center mt-3">Subcategories</h1>
+<section class="py-4 container">
+  <div class="row justify-content-center">
+    <div *ngFor="let item of subcat; let index = index" class="col-11 col-md-6 col-lg-3 mx-0 mb-4">
+      <div class="card p-0 overflow-hidden h-100 shadow">
+        <img [src]="item.Cat_img_path" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.Cat_Name }}</h5>
+          <a [routerLink]="'/SubCategory2/' + item.cat_id" class="btn btn-success">View Products</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
